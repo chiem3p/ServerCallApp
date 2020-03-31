@@ -2,22 +2,24 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Hello</title>
+  <meta charset="UTF-8">
+  <title>Hello</title>
 </head>
 
 <body>
-    <h1>Hello</h1>
-    <video id='localStream' width="300" controls></video>
+  <h1>Hello</h1>
+  <video id='sun' width="300" controls></video>
 </body>
 <script>
-navigator.mediaDevices.getUserMedia({ audio: true, video: true })
+  navigator.mediaDevices.getUserMedia({audio: false, video:true})
 .then(function(stream) {
-  /* use the stream */
+  var video = document.getElementById('sun');
+  video.srcObject = stream;
+  video.onloadedmetadata = function(e) {
+    video.play();
+  };
 })
-.catch(function(err) {
-  /* handle the error */
-});
+.catch(function(err) { console.log(err.name + ": " + err.message); });
 </script>
 
 </html>
