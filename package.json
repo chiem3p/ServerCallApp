@@ -1,0 +1,11 @@
+{
+  "name": "ServerCallApp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/chiem3p/ServerCallApp.git",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.0.2",
+    "express": "^4.17.1"
+  }
+}

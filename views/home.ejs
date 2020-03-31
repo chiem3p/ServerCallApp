@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+
+<body>
+    <h1>Hello</h1>
+    <video id='localStream' width="300" controls></video>
+</body>
+<script>
+navigator.mediaDevices.getUserMedia({ audio: true, video: true })
+.then(function(stream) {
+  /* use the stream */
+})
+.catch(function(err) {
+  /* handle the error */
+});
+</script>
+
+</html>
